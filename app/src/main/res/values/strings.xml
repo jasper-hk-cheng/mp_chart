@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MpChart</string>
+    <!-- KWay Exam -->
+    <string name="description">(元)</string>
+    <string name="legend_stock_price">股價 %1$.2f</string>
+    <string name="legend_pe_ratio">%1$.2f 倍 %2$.2f</string>
+    <!-- TODO .2f 的 .2 -->
+</resources>

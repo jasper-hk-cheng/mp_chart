@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="stream.Stream01Activity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hor_33"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hor_66"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver_33"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver_66"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <include
+        android:id="@+id/include_legend_for_date"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/include_legend_for_pe_ratio_6x"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_33"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_legend_for_stock_price"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/include_legend_for_pe_ratio_5x"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_66"
+        app:layout_constraintStart_toEndOf="@id/gl_ver_33" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_6x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/include_legend_for_pe_ratio_3x"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_33"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_5x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/include_legend_for_pe_ratio_2x"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_66"
+        app:layout_constraintStart_toEndOf="@id/gl_ver_33" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_4x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/include_legend_for_pe_ratio_1x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gl_ver_66" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_3x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/gl_hor_33"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_33"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_2x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/gl_hor_33"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver_66"
+        app:layout_constraintStart_toEndOf="@id/gl_ver_33" />
+
+    <include
+        android:id="@+id/include_legend_for_pe_ratio_1x"
+        layout="@layout/item_legend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/gl_hor_33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/gl_ver_66" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/stream_chart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/gl_hor_66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_hor_33" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="@color/text_all"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/stream_chart"
+        app:layout_constraintRight_toRightOf="@id/stream_chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

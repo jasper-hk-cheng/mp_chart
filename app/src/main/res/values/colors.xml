@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- stream chart 01 - KWayExam -->
+    <color name="pe_ratio_stream_6x">#FD8989</color>
+    <color name="pe_ratio_stream_5x">#FDB881</color>
+    <color name="pe_ratio_stream_4x">#FFDCBC</color>
+    <color name="pe_ratio_stream_3x">#C9E0FF</color>
+    <color name="pe_ratio_stream_2x">#749BDE</color>
+    <color name="pe_ratio_stream_1x">#269697</color>
+    <color name="text_all">#BBC0CA</color>
+    <color name="stock_price">#FE0500</color>
+</resources>
